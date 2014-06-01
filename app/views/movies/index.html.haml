@@ -4,13 +4,15 @@
 %table#movies
   %thead
     %tr
-      %th Movie Title
-      %th Rating
-      %th Release Date
+      %th Number
+      %th{:class => helper_class("title")}= link_to "Title", { :sort => "title" }, :id => "title_header"
+      %th= link_to "Rating", :sort => "rating"
+      %th{:class => helper_class("release_date")}= link_to "Release Date", {:sort => "release_date" }, :id => "release_date_header"
       %th More Info
   %tbody
-    - @movies.each do |movie|
+    - @movies.each_with_index do |movie, index| 
       %tr
+        %td= index + 1
         %td= movie.title 
         %td= movie.rating
         %td= movie.release_date

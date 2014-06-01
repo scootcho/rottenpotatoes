@@ -16,6 +16,10 @@ a {
   text-decoration: underline;
   font-weight: bold;
 }
+
+tr:hover {
+  background: gold;
+}
 h1 {
   color: maroon;
   font-size: 150%;
@@ -44,6 +48,11 @@ table#movies th {
   font-weight: bold;
   background-color: wheat;
 }
+
+table#movies th.hilite {
+  background-color: yellow;
+}
+
 table#movies th, table#movies td {
   padding: 4px;
   text-align: left;
